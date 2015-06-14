@@ -1,0 +1,5 @@
+# C++ 
+**/*.o
+
+# Qt Creator
+**/*.pro.user

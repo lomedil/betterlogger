@@ -1,5 +1,6 @@
 TEMPLATE = app
 QT -= gui
+QT += network websockets
 TARGET = logger_app
 
 

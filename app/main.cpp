@@ -3,6 +3,7 @@
 
 #include <MessageDispatcher.h>
 #include <appenders/ConsoleAppender.h>
+#include <appenders/WebSocketAppender.h>
 
 #include <TimerMessage.h>
 
@@ -18,6 +19,7 @@ int main(int argn, char **argv)
 
     g_messageDispatchet = new better::MessageDispatcher();
     g_messageDispatchet->addAppender(new better::appenders::ConsoleAppender());
+    g_messageDispatchet->addAppender(new better::appenders::WebSocketAppender());
 
     qDebug() << "Installing message handler";
     qInstallMessageHandler(&message_handler);

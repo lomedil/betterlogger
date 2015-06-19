@@ -3,6 +3,7 @@
 
 #include <better_globals.h>
 #include <QDebug>
+#include <IFormatter.h>
 
 
 BEGIN_NS_BETTER_APPENDERS
@@ -14,6 +15,8 @@ public:
 
 public:
     virtual void postMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg) = 0;
+
+    virtual void installFormatter(IFormatter *formatter) = 0;
 };
 
 END_NS_BETTER_APPENDERS

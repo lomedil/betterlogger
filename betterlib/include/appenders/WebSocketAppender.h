@@ -4,12 +4,12 @@
 #include <better_globals.h>
 #include <QtCore>
 #include <QWebSocketServer>
-#include <appenders/ILogAppender.h>
+#include <appenders/BaseAppender.h>
 
 BEGIN_NS_BETTER_APPENDERS
 
 
-class WebSocketAppender : public QObject, public ILogAppender
+class WebSocketAppender : public QObject, public BaseAppender
 {
     Q_OBJECT
 public:

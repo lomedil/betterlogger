@@ -11,7 +11,7 @@ ConsoleAppender::ConsoleAppender()
 void ConsoleAppender::postMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     QTextStream ts(stdout);
-    ts << qPrintable(msg);
+    ts << qPrintable(hasFormatter()? formatter()->format(type, context, msg) : msg);
 }
 
 

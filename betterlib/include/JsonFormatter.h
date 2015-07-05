@@ -19,6 +19,8 @@ private:
     // IFormatter interface
 public:
     QString format(QtMsgType type, const QMessageLogContext &context, const QString &msg);
+
+    BundleFormatter createBundle();
 };
 
 

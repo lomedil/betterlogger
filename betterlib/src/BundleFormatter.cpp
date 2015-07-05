@@ -6,6 +6,7 @@ BEGIN_NS_BETTER
 class BundleFormatterPrivate
 {
 public:
+    QStringList     entries;
     IFormatter      *pFormatter;
     QString         header;
     QString         footer;
@@ -23,7 +24,6 @@ BundleFormatter::BundleFormatter()
 {  }
 
 BundleFormatter::BundleFormatter(const BundleFormatter &other) :
-    QStringList(other),
     d(other.d)
 {
 
@@ -49,16 +49,21 @@ bool BundleFormatter::isValid() const
     return !d.isNull();
 }
 
+int BundleFormatter::count() const
+{
+    return d->entries.count();
+}
+
 int BundleFormatter::addMessage(QtMsgType type, const QMessageLogContext &context, const QString msg)
 {
-    this->append(d->pFormatter->format(type, context, msg));
-    return this->count();
+    d->entries.append(d->pFormatter->format(type, context, msg));
+    return count();
 }
 
 QString BundleFormatter::toString() const
 {
     QString output = d->header;
-    output += this->join(d->separator);
+    output += d->entries.join(d->separator);
     output += d->footer;
     return output;
 }

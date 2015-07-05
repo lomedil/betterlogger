@@ -12,7 +12,7 @@ BEGIN_NS_BETTER
 class IFormatter;
 class BundleFormatterPrivate;
 
-class BundleFormatter : QStringList
+class BundleFormatter
 {
 public:
     BundleFormatter(); // invalid
@@ -29,6 +29,7 @@ public:
 
 public:
     bool isValid() const;
+    int count() const;
     int addMessage(QtMsgType type, const QMessageLogContext &context, const QString msg);
 
     QString toString() const;

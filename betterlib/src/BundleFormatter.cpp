@@ -1,4 +1,4 @@
-#include <MessageBundle.h>
+#include <BundleFormatter.h>
 #include <IFormatter.h>
 
 BEGIN_NS_BETTER
@@ -18,6 +18,9 @@ BundleFormatter::BundleFormatter(IFormatter *formatter) :
 {
     d->pFormatter = formatter;
 }
+
+BundleFormatter::BundleFormatter()
+{  }
 
 BundleFormatter::BundleFormatter(const BundleFormatter &other) :
     QStringList(other),
@@ -39,6 +42,11 @@ void BundleFormatter::setFooter(const QString &footer)
 void BundleFormatter::setSeparator(const QString &separator)
 {
     d->separator = separator;
+}
+
+bool BundleFormatter::isValid() const
+{
+    return !d.isNull();
 }
 
 int BundleFormatter::addMessage(QtMsgType type, const QMessageLogContext &context, const QString msg)

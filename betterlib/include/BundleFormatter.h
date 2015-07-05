@@ -14,11 +14,13 @@ class BundleFormatterPrivate;
 
 class BundleFormatter : QStringList
 {
+public:
+    BundleFormatter(); // invalid
+    BundleFormatter(const BundleFormatter &other);
+
 private:
     BundleFormatter(IFormatter *formatter);
 
-public:
-    BundleFormatter(const BundleFormatter &other);
 
 public:
     void setHeader(const QString &header);
@@ -26,6 +28,7 @@ public:
     void setSeparator(const QString &separator);
 
 public:
+    bool isValid() const;
     int addMessage(QtMsgType type, const QMessageLogContext &context, const QString msg);
 
     QString toString() const;

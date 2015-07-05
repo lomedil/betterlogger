@@ -25,6 +25,7 @@ IFormatter *BaseAppender::formatter()
 void BaseAppender::installFormatter(IFormatter *formatter)
 {
     m_pFormatter = formatter;
+    onFormatterChanged();
 }
 
 

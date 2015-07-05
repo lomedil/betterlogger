@@ -20,6 +20,9 @@ public:
 private:
     IFormatter      *m_pFormatter;
 
+protected:
+    virtual void onFormatterChanged(){}
+
 // ILogAppender interface
 public:
     void installFormatter(IFormatter *formatter);

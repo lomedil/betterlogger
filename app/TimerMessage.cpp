@@ -8,7 +8,7 @@ TimerMessage::TimerMessage(QObject *parent) :
 {
     connect(m_pTimer, SIGNAL(timeout()), this, SLOT(printCounter()) );
 
-    m_pTimer->setInterval(1000);
+    m_pTimer->setInterval(750);
     m_pTimer->start();
 }
 

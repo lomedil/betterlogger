@@ -5,7 +5,7 @@
 #include <better_globals.h>
 #include <ILogAppender.h>
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 class BaseAppender : public ILogAppender
 {
@@ -28,7 +28,6 @@ public:
     void installFormatter(IFormatter *formatter);
 };
 
-END_NS_BETTER_APPENDERS
-
+END_NS_BETTER
 
 #endif //_BASEAPPENDER_H_

@@ -1,7 +1,7 @@
 #include <WebSocketAppender.h>
 #include <QWebSocket>
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 
 
@@ -95,4 +95,4 @@ void WebSocketAppender::postMessage(QtMsgType type, const QMessageLogContext &co
 }
 
 
-END_NS_BETTER_APPENDERS
+END_NS_BETTER

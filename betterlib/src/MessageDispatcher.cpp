@@ -7,7 +7,7 @@ MessageDispatcher::MessageDispatcher()
 
 }
 
-void MessageDispatcher::addAppender(appenders::ILogAppender *appender)
+void MessageDispatcher::addAppender(ILogAppender *appender)
 {
     if(m_appenders.contains(appender)) return;
 

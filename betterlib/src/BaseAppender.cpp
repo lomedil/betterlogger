@@ -1,6 +1,6 @@
-#include <appenders/BaseAppender.h>
+#include <BaseAppender.h>
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 
 BaseAppender::BaseAppender() :
@@ -29,4 +29,4 @@ void BaseAppender::installFormatter(IFormatter *formatter)
 }
 
 
-END_NS_BETTER_APPENDERS
+END_NS_BETTER

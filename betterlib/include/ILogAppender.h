@@ -6,7 +6,7 @@
 #include <IFormatter.h>
 
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 class ILogAppender
 {
@@ -19,7 +19,7 @@ public:
     virtual void installFormatter(IFormatter *formatter) = 0;
 };
 
-END_NS_BETTER_APPENDERS
+END_NS_BETTER
 
 
 #endif //_ILOGAPPENDERS_H_

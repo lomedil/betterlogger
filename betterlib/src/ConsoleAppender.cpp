@@ -1,7 +1,7 @@
-#include <appenders/ConsoleAppender.h>
+#include <ConsoleAppender.h>
 #include <QTextStream>
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 ConsoleAppender::ConsoleAppender()
 {
@@ -16,4 +16,4 @@ void ConsoleAppender::postMessage(QtMsgType type, const QMessageLogContext &cont
 
 
 
-END_NS_BETTER_APPENDERS
+END_NS_BETTER

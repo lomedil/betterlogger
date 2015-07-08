@@ -15,11 +15,9 @@ defineReplace(dirFiles){
 }
 
 INCLUDEPATH = \
-                ./include \
-                ./include/appenders
+                ./include
 
-HEADERS +=   $$dirFiles(./include) \
-            $$dirFiles(include/appenders)
+HEADERS +=   $$dirFiles(./include)
 
 SOURCES = $$dirFiles(./src)
 

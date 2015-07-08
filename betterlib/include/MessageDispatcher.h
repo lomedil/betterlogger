@@ -6,7 +6,7 @@
 #include <QString>
 #include <QList>
 #include <QDebug>
-#include <appenders/ILogAppender.h>
+#include <ILogAppender.h>
 
 
 BEGIN_NS_BETTER
@@ -17,10 +17,10 @@ public:
     MessageDispatcher();
 
 private:
-    QList<appenders::ILogAppender*> m_appenders;
+    QList<ILogAppender*> m_appenders;
 
 public:
-    void addAppender(appenders::ILogAppender *appender);
+    void addAppender(ILogAppender *appender);
     void postMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
 };
 

@@ -4,8 +4,7 @@ QT += network websockets
 TARGET = logger_app
 
 
-INCLUDEPATH +=  ../betterlib/include \
-                ../betterlib/include/appenders
+INCLUDEPATH +=  ../betterlib/include
 
 HEADERS += *.h
 

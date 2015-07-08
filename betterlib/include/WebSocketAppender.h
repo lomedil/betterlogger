@@ -4,9 +4,9 @@
 #include <better_globals.h>
 #include <QtCore>
 #include <QWebSocketServer>
-#include <appenders/BaseAppender.h>
+#include <BaseAppender.h>
 
-BEGIN_NS_BETTER_APPENDERS
+BEGIN_NS_BETTER
 
 
 class WebSocketAppender : public QObject, public BaseAppender
@@ -41,6 +41,6 @@ public:
     void postMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
 };
 
-END_NS_BETTER_APPENDERS
+END_NS_BETTER
 
 #endif //_WEBSOCKETAPPENDER_H_

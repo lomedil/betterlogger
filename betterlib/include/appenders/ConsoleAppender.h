@@ -2,11 +2,11 @@
 #define _CONSOLEAPPENDER_H_
 
 #include <better_globals.h>
-#include <appenders/ILogAppender.h>
+#include <appenders/BaseAppender.h>
 
 BEGIN_NS_BETTER_APPENDERS
 
-class ConsoleAppender : public ILogAppender
+class ConsoleAppender : public BaseAppender
 {
 public:
     ConsoleAppender();

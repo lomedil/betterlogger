@@ -4,6 +4,7 @@
 #include <MessageDispatcher.h>
 #include <appenders/ConsoleAppender.h>
 #include <appenders/WebSocketAppender.h>
+#include <JsonFormatter.h>
 
 #include <TimerMessage.h>
 
@@ -17,9 +18,12 @@ int main(int argn, char **argv)
 
     qDebug() << "Init. app";
 
+    better::appenders::WebSocketAppender *wsAppender = new better::appenders::WebSocketAppender();
+    wsAppender->installFormatter(new better::JsonFormatter);
+
     g_messageDispatchet = new better::MessageDispatcher();
     g_messageDispatchet->addAppender(new better::appenders::ConsoleAppender());
-    g_messageDispatchet->addAppender(new better::appenders::WebSocketAppender());
+    g_messageDispatchet->addAppender(wsAppender);
 
     qDebug() << "Installing message handler";
     qInstallMessageHandler(&message_handler);

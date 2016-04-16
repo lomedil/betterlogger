@@ -44,7 +44,7 @@ QString JsonFormatter::format(QtMsgType type, const QMessageLogContext &context,
 BundleFormatter JsonFormatter::createBundle()
 {
     BundleFormatter bundle = createMessageBundle(this);
-    bundle.setHeader("{ entries: [");
+    bundle.setHeader("{ \"entries\": [");
     bundle.setSeparator(",");
     bundle.setFooter("] }");
     return bundle;
